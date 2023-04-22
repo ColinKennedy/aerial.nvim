@@ -6,7 +6,7 @@ M.jump = {
   desc = "Jump to the symbol under the cursor",
   callback = function(nav)
     local symbol = nav:get_current_symbol()
-    nav:close()
+
     if symbol then
       require("aerial.navigation").select_symbol(symbol, nav.winid, nav.bufnr, { jump = true })
     end
